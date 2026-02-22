@@ -11,6 +11,39 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="image/android-chrome-512x512.png" type="image/x-icon" />
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/c177988b3a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body class="bg-gray-50 min-h-screen p-4 md:p-10">
+    <header>
+      <div class="max-w-6xl mx-auto">
+      <h1
+        class="text-2xl font-bold text-slate-800 mb-6 text-center md:text-left"
+      >
+        Job Application Tracker
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div class="bg-white p-6 rounded-lg border shadow-sm">
+          <p class="text-gray-500 font-medium">Total</p>
+          <h2 id="total-count" class="text-3xl font-bold">8</h2>
+        </div>
+        <div class="bg-white p-6 rounded-lg border shadow-sm">
+          <p class="text-gray-500 font-medium">Interview</p>
+          <h2 id="interview-count" class="text-3xl font-bold text-green-600">
+            0
+          </h2>
+        </div>
+        <div class="bg-white p-6 rounded-lg border shadow-sm">
+          <p class="text-gray-500 font-medium text-red-500">Rejected</p>
+          <h2 id="rejected-count" class="text-3xl font-bold text-red-600">0</h2>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
