@@ -88,3 +88,20 @@ let jobs = [
       "We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript.",
   },
 ];
+
+let currentFilter = "all";
+
+function updateDashboard() {
+  const total = jobs.length;
+  const interviewCount = jobs.filter((j) => j.status === "interview").length;
+  const rejectedCount = jobs.filter((j) => j.status === "rejected").length;
+
+  document.getElementById("total-count").innerText = total;
+  document.getElementById("interview-count").innerText = interviewCount;
+  document.getElementById("rejected-count").innerText = rejectedCount;
+
+  const currentTabJobs = jobs.filter((j) =>
+    currentFilter === "all" ? true : j.status === currentFilter,
+  );
+  document.getElementById("job-tab-count").innerText = currentTabJobs.length;
+}
