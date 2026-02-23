@@ -38,4 +38,17 @@ function renderJobs(filter = "all") {
   updateDashboard();
 }
 
+window.updateStatus = (id, newStatus) => {
+  const jobIndex = jobs.findIndex((j) => j.id === id);
+  if (jobIndex !== -1) {
+    jobs[jobIndex].status = newStatus;
+    renderJobs(currentFilter);
+  }
+};
+
+window.deleteJob = (id) => {
+  jobs = jobs.filter((job) => job.id !== id);
+  renderJobs(currentFilter);
+};
+
 renderJobs();
