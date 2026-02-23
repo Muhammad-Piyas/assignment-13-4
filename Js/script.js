@@ -51,4 +51,19 @@ window.deleteJob = (id) => {
   renderJobs(currentFilter);
 };
 
+window.filterJobs = (status) => {
+  const tabs = ["btn-all", "btn-interview", "btn-rejected"];
+  tabs.forEach((id) => {
+    const btn = document.getElementById(id);
+    btn.classList.remove("bg-blue-600", "text-white");
+    btn.classList.add("bg-white", "text-gray-700");
+  });
+
+  const activeBtn = document.getElementById(`btn-${status}`);
+  activeBtn.classList.replace("bg-white", "bg-blue-600");
+  activeBtn.classList.replace("text-gray-700", "text-white");
+
+  renderJobs(status);
+};
+
 renderJobs();
