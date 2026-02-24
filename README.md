@@ -1,15 +1,21 @@
-# What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+## What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 ## Answer:
 
-1. getElementById: This returns only the element with a specific ID. This is the fastest in terms of performance.
+- getElementById: This returns only the element with a specific ID. This is the fastest in terms of performance.
 
-2. getElementsByClassName: This returns a live HTMLCollection containing all elements of the same class. It looks like an Array, but it is not a real Array.
+- getElementsByClassName: This returns a live HTMLCollection containing all elements of the same class. It looks like an Array, but it is not a real Array.
 
-3. querySelector: This returns the first element found using a CSS selector. It is much more flexible.
+- querySelector: This returns the first element found using a CSS selector. It is much more flexible.
 
-# How do you create and insert a new element into the DOM?
+##
+
+## How do you create and insert a new element into the DOM?
 
 ## Answer:
 
 First, you need to create the element with document.createElement('tagName'). Then, you need to set the content with innerText or innerHTML and insert it inside the specified parent element with appendChild() or insertBefore().
+
+##
+
+#
